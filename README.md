@@ -1,18 +1,23 @@
 # go-struct-to-ts-interface
+
 Convert Go lang struct types to TypeScript interfaces
 
-## Running
+### Running
+
 ```
 go run .
 ```
 
-## Example Usage
-Follow the messages from each section in `main.go`
-  - `Struct Types Declaration` - Declare all the struct types you want to convert into TS Interfaces
-  - `Struct Types to Process` - Add all the struct types you want to convert into TS interfaces in the `interfaceList` array
+### Example Usage
+
+Go to the following sections in `main.go`
+
+- `Struct Types Declaration` - Declare all the struct types you want to convert into TS Interfaces
+- `Struct Types to Process` - Add all the struct types you want to convert into TS interfaces in the `interfaceList` array
 
 Example:
-```
+
+```Go
 // SECTION: Struct Types Declaration
 // Declare your struct types here
 type Demo struct {
@@ -39,12 +44,14 @@ func main() {
 ```
 
 Run the app with the command:
+
 ```
 go run .
 ```
 
-Example struct `Demo` above should result to the following TS Interface:
-```
+Example structs `Demo` & `Baz` above should produce the following TS interfaces:
+
+```TypeScript
 export interface Demo {
     foo?: string
     bar: number
@@ -57,9 +64,11 @@ export interface Baz {
 }
 ```
 
-## Built with
+### Built with
+
 - [Go](https://go.dev/)
 - [Bel](https://pkg.go.dev/github.com/32leaves/bel)
 
-## Contributors:
+### Contributors
+
 - Edwin Carl Flores
